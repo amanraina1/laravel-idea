@@ -14,7 +14,7 @@
         {{ $slot }}
     </main>
 
-{{--    @session('success')--}}
+    @session('success')
         <div
             x-data="{ show: true }"
             x-init="setTimeout(() => show = false, 3000)"
@@ -22,9 +22,9 @@
             x-transition.opacity.duration.300ms
             class="bg-primary px-4 py-3 absolute bottom-4 right-4 rounded-lg"
         >
-            Testing for now
+            {{ $message }}
         </div>
-{{--    @endsession--}}
+    @endsession
 
 </body>
 </html>
